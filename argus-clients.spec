@@ -49,7 +49,7 @@ Argus jest monitorem sieci czasu rzeczywistego zaprojektowanym do
 strumieni danych. Jest bardzo podobny do NetFlow z Cisco, jednak
 bardziej rozbudowany i posiada inny format danych.
 
-Ta paczka dostarcza różnych metod do przetwarzania i prezentowania
+Ta paczka dostarcza różne metody do przetwarzania i prezentowania
 danych.
 
 %prep

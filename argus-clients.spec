@@ -133,19 +133,19 @@ fi
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/rarc
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/radium
 %config(noreplace) %verify(not md5 mtime size) /etc/logrotate.d/radium
-%{_mandir}/man1/ra.1.gz
-%{_mandir}/man1/rabins.1.gz
-%{_mandir}/man1/racluster.1.gz
-%{_mandir}/man1/racount.1.gz
-%{_mandir}/man1/ragraph.1.gz
-%{_mandir}/man1/ragrep.1.gz
-%{_mandir}/man1/rahisto.1.gz
-%{_mandir}/man1/rasort.1.gz
-%{_mandir}/man1/rasplit.1.gz
-%{_mandir}/man1/rastrip.1.gz
-%{_mandir}/man5/racluster.5.gz
-%{_mandir}/man5/radium.conf.5.gz
-%{_mandir}/man5/rarc.5.gz
-%{_mandir}/man8/radium.8.gz
+%{_mandir}/man1/ra.1*
+%{_mandir}/man1/rabins.1*
+%{_mandir}/man1/racluster.1*
+%{_mandir}/man1/racount.1*
+%{_mandir}/man1/ragraph.1*
+%{_mandir}/man1/ragrep.1*
+%{_mandir}/man1/rahisto.1*
+%{_mandir}/man1/rasort.1*
+%{_mandir}/man1/rasplit.1*
+%{_mandir}/man1/rastrip.1*
+%{_mandir}/man5/racluster.5*
+%{_mandir}/man5/radium.conf.5*
+%{_mandir}/man5/rarc.5*
+%{_mandir}/man8/radium.8*
 %attr(770,root,argus) %dir %{_var}/log/%{name}
 %attr(660,root,argus) %ghost %{_var}/log/%{name}/radium.log

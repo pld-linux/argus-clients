@@ -31,6 +31,7 @@ BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(post,preun):	/sbin/chkconfig
+Requires:	perl-rrdtool
 Requires:	rc-scripts
 Provides:	group(argus)
 Provides:	user(argus)

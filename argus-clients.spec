@@ -24,6 +24,7 @@ Source6:	%{name}-radium.logrotate
 Source7:	%{name}-ranonymize.conf
 Source8:	%{name}-ra.print.all.conf
 Source9:	%{name}-rarc
+Patch0:		%{name}-ragraph-rabins-paths.patch
 URL:		http://www.qosient.com/argus/
 BuildRequires:	bison
 %{?with_sasl:BuildRequires:	cyrus-sasl-devel}
@@ -54,6 +55,7 @@ danych.
 
 %prep
 %setup -q -n %{name}-%{version}.%{_rc}
+%patch0
 
 %build
 %configure \

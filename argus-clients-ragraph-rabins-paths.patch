@@ -1,0 +1,14 @@
+--- ragraph/ragraph.pl.orig	2007-03-05 19:58:57.057547750 +0100
++++ ragraph/ragraph.pl	2007-03-05 19:59:32.671773500 +0100
+@@ -196,9 +196,9 @@
+ sub RagraphProcessArgusData {
+    my @args = "";
+    if ($histo) {
+-      @args = ("/usr/local/bin/rabins -M soft zero -p6 -GL0 -s ", @arglist, "> $tmpfile");
++      @args = ("/usr/bin/rabins -M soft zero -p6 -GL0 -s ", @arglist, "> $tmpfile");
+    } else {
+-      @args = ("/usr/local/bin/rabins -M soft zero -p6 -GL0 -s ltime ", @arglist, "> $tmpfile");
++      @args = ("/usr/bin/rabins -M soft zero -p6 -GL0 -s ltime ", @arglist, "> $tmpfile");
+    }
+ 
+    print "DEBUG: RagraphProcessArgusData: exec: @args\n" if $debug;

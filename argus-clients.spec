@@ -6,8 +6,8 @@
 %define		_ver_minor	0
 %define		_rc		rc.40
 %define		_rel	0.1
-Summary:	Real time network flow monitor
-Summary(pl.UTF-8):	Monitor obciążenia sieci czasu rzeczywistego
+Summary:	Real time network flow monitor - client applications
+Summary(pl.UTF-8):	Monitor obciążenia sieci czasu rzeczywistego - programy klienckie
 Name:		argus-clients
 Version:	%{_ver_major}.%{_ver_minor}
 Release:	0.%{_rc}.%{_rel}
@@ -48,8 +48,9 @@ This package provides variuos methods to process and present the data.
 %description -l pl.UTF-8
 Argus jest monitorem sieci czasu rzeczywistego zaprojektowanym do
 śledzenia i raportowania stanu sieci oraz wszelkiego typu transakcji
-strumieni danych. Jest bardzo podobny do NetFlow z Cisco, jednak
-bardziej rozbudowany i posiada inny format danych.
+sieciowych widzianych w strumieniu danych. Jest bardzo podobny do
+NetFlow z Cisco, jednak bardziej rozbudowany i posiada inny format
+danych.
 
 Ta paczka dostarcza różne metody do przetwarzania i prezentowania
 danych.

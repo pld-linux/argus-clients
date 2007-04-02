@@ -1,5 +1,5 @@
 /var/log/argus-clients/*log {
-	olddir /var/log/archiv/argus-clients
+	olddir /var/log/archive/argus-clients
 	weekly
 	rotate 4
 	compress

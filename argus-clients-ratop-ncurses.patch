@@ -1,0 +1,22 @@
+--- ratop/ratop.h	2007-05-01 03:56:40.000000000 +0200
++++ ratop/ratop.h	2007-05-04 10:12:03.000000000 +0200
+@@ -67,7 +67,7 @@ char *RaGetHostFieldLength(void); 
+ char *RaGetPortFieldLength(void); 
+ 
+ #if defined(ARGUS_CURSES)
+-#include <curses.h>
++#include <ncurses/curses.h>
+ 
+ #if defined(__NetBSD__) || defined(CYGWIN)
+ #include <termios.h>
+--- ratop/ratop.h	2007-05-04 10:26:18.000000000 +0200
++++ ratop/ratop.h	2007-05-04 10:29:04.000000000 +0200
+@@ -72,7 +72,7 @@ char *RaGetPortFieldLength(void); 
+ #if defined(__NetBSD__) || defined(CYGWIN)
+ #include <termios.h>
+ #else
+-#include <term.h>
++#include <ncurses/term.h>
+ #endif /* NetBSD || CYGWIN */
+ 
+ char *RaModifyCommandArray[] = {

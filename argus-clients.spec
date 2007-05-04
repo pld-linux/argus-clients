@@ -4,7 +4,7 @@
 #
 %define		_ver_major	3.0
 %define		_ver_minor	0
-%define		_rc		rc.40
+%define		_rc		rc.43
 %define		_rel	0.1
 Summary:	Real time network flow monitor - client applications
 Summary(pl.UTF-8):	Monitor obciążenia sieci czasu rzeczywistego - programy klienckie
@@ -14,7 +14,7 @@ Release:	0.%{_rc}.%{_rel}
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	ftp://qosient.com/dev/argus-%{_ver_major}/%{name}-%{version}.%{_rc}.tar.gz
-# Source0-md5:	78ad75c148f1ee7b48d0c3029c4be7e4
+# Source0-md5:	d85d5546cdf527f096c367afffd8f334
 Source1:	%{name}-excel.rc
 Source2:	%{name}-racluster.conf
 Source3:	%{name}-radium.conf
@@ -25,6 +25,8 @@ Source7:	%{name}-ranonymize.conf
 Source8:	%{name}-ra.print.all.conf
 Source9:	%{name}-rarc
 Patch0:		%{name}-ragraph-rabins-paths.patch
+Patch1:		%{name}-ratop-ncurses.patch
+Patch2:		%{name}-configure-ncurses.patch
 URL:		http://www.qosient.com/argus/
 BuildRequires:	bison
 %{?with_sasl:BuildRequires:	cyrus-sasl-devel}
@@ -58,6 +60,8 @@ danych.
 %prep
 %setup -q -n %{name}-%{version}.%{_rc}
 %patch0
+%patch1
+%patch2
 
 %build
 %configure \
@@ -115,9 +119,11 @@ fi
 %attr(755,root,root) %{_bindir}/rabins
 %attr(755,root,root) %{_bindir}/racluster
 %attr(755,root,root) %{_bindir}/racount
+%attr(755,root,root) %{_bindir}/radump
 %attr(755,root,root) %{_bindir}/ragraph
 %attr(755,root,root) %{_bindir}/ragrep
 %attr(755,root,root) %{_bindir}/rahisto
+%attr(755,root,root) %{_bindir}/ramatrix
 %attr(755,root,root) %{_bindir}/ranonymize
 %attr(755,root,root) %{_bindir}/rapath
 %attr(755,root,root) %{_bindir}/rapolicy

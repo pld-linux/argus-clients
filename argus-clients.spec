@@ -37,7 +37,7 @@ Requires:	perl-rrdtool
 Requires:	rc-scripts
 Provides:	group(argus)
 Provides:	user(argus)
-Conflicts:	logrotate < 3.7.4
+Conflicts:	logrotate < 3.7-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

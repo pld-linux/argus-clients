@@ -37,6 +37,7 @@ Requires:	perl-rrdtool
 Requires:	rc-scripts
 Provides:	group(argus)
 Provides:	user(argus)
+Conflicts:	logrotate < 3.7.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -142,7 +143,7 @@ fi
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/ra.print.all.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/rarc
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/radium
-%config(noreplace) %verify(not md5 mtime size) /etc/logrotate.d/radium
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/logrotate.d/radium
 %{_mandir}/man1/ra.1*
 %{_mandir}/man1/rabins.1*
 %{_mandir}/man1/racluster.1*
